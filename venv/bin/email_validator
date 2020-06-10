@@ -1,10 +1,8 @@
-#!/Users/code/Python/flask_tutorial/venv/bin/python3
+#!/mnt/nfs/home/khtang/work/Projects/flask_application/venv/bin/python3.6
 # -*- coding: utf-8 -*-
 import re
 import sys
-
 from email_validator import main
-
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
     sys.exit(main())
