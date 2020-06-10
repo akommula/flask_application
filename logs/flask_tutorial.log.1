@@ -1,0 +1,127 @@
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Exception on /explore [GET]
+Traceback (most recent call last):
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/code/Python/flask_tutorial/app/routes.py", line 167, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+NameError: name 'Post' is not defined
+Exception on /index [POST]
+Traceback (most recent call last):
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/code/Python/flask_tutorial/app/routes.py", line 27, in index
+    post = Post(body=form.post.data, author=current_user)
+NameError: name 'Post' is not defined
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Flask Tutorial startup
+Exception on /reset_password_request [POST]
+Traceback (most recent call last):
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/code/Python/flask_tutorial/app/routes.py", line 205, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/code/Python/flask_tutorial/app/email.py", line 16, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/code/Python/flask_tutorial/app/models.py", line 64, in get_reset_password_token
+    return jwt.encode({'reset_password': self.id, 'exp': time() + expires_in},
+NameError: name 'jwt' is not defined
+Flask Tutorial startup
+Flask Tutorial startup
+Exception on /user/susan [GET]
+Traceback (most recent call last):
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/code/Python/flask_tutorial/app/routes.py", line 108, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/code/Python/flask_tutorial/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/code/Python/flask_tutorial/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/code/Python/flask_tutorial/app/templates/base.html", line 52, in block "content"
+    {% block app_content %}
+  File "/Users/code/Python/flask_tutorial/app/templates/user.html", line 17, in block "app_content"
+    <p>{{ user.folloewrs.count() }} followers, {{ usser.followed.count() }} following.</p>
+  File "/Users/code/Python/flask_tutorial/venv/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'folloewrs'
+Flask Tutorial startup
